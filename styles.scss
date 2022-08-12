@@ -1,0 +1,144 @@
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Mouse Memoirs', sans-serif;
+}
+
+.background {
+    background-image: url(./background.jpg);
+    background-size: cover;
+    width: 100%;
+    padding: 3rem;
+}
+
+.title {
+    font-size: 9rem;
+    color: red;
+    text-align: center;
+    animation: pulse 1s alternate ease infinite;
+}
+
+.conversation {
+    &__container {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    &__profile-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 20%;
+        height: 100vw;
+        padding-top: 3rem;
+    }
+
+    &__spiderman, &__spiderman--venom {
+        width: 100%;
+        border-radius: 1rem;
+    }
+
+    &__button, &__button--venom, &__button--ironman, &__button--thanos {
+        width: 50%;
+        margin: 1rem;
+        background-color: darkgreen;
+        border: none;
+        border-radius: 1rem;
+        padding: 0.5rem;
+        font-weight: bold;
+
+        &:hover {
+            background-color: brown;
+        }
+
+        &:active {
+            background-color: brown;
+            box-shadow: 2px 2px 5px salmon;
+        }
+    }
+
+    &__box {
+        width: 30%;
+        min-height: 50vw;
+        background-color: chocolate;
+        border-radius: 1rem;
+        margin: 3rem;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__block {
+        width: 100%;
+        display: flex;
+    }
+
+    &__block--venom{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__quote {
+        width: 50%;
+        margin: 0.5rem;
+        padding: 0.5rem;
+        background-color: darkgreen;
+        border-radius: 1rem;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+
+    &__quote--venom {
+        width: 50%;
+        margin: 0.5rem;
+        padding: 0.5rem;
+        background-color: red;
+        border-radius: 1rem;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+
+    &__form, &__form--venom {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__form--venom {
+        margin-top: 4.5rem;
+    }
+
+    &__text {
+        width: 100%;
+        height: 10rem;
+        background-color: violet;
+        border: none;
+        resize: none;
+    }
+
+    &__button--form, &__button--venomForm {
+        background-color: purple;
+        padding: 1rem;
+        border-radius: 1rem;
+        margin-top: 1rem;
+        border: none;
+    }
+}
